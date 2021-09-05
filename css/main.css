@@ -1,0 +1,493 @@
+@charset "UTF-8";
+* {
+    margin: 0;
+    padding: 0;
+    font-family: inherit;
+    box-sizing:border-box;
+    object-fit:cover;
+}
+
+li,
+ol,
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+body {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-content: center;
+}
+
+button {
+    margin: 0 auto;
+}
+
+#wrap {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-content: center;
+}
+
+#top {
+    position: relative;
+    min-width: 100%;
+    height: 1100px;
+}
+
+header {
+    margin: 0 auto;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 50px;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(255 255 255 / 0.6);
+    padding: 0 300px;
+    box-sizing: border-box;
+}
+
+.logo {
+    width: 200px;
+    height: 100%;
+    display: flex;
+    margin: 0 30px;
+}
+
+header #a {
+    width: 100px;
+    font-size: 23px;
+    color: darkslategray;
+    line-height: 60px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+header .logo a {
+    width: 400px;
+    height: 100px;
+}
+
+.logo img {
+    width: 60px;
+}
+
+header nav {
+    width: 900px;
+    height: 50px;
+    margin: 10px 0;
+    box-sizing: border-box;
+    line-height: 30px;
+    padding: 10px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    color: black;
+}
+
+nav ul li a:hover {
+    color: aliceblue;
+}
+
+.slider {
+    width: 100%;
+    height: 1100px;
+    margin: 0 auto;
+}
+
+.slide {
+    width: 100%;
+    height: 1100px;
+    display: flex;
+    position: relative;
+}
+
+.slide > li {
+    width: 100%;
+    height: 1100px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.slide > li > img {
+    width: 100%;
+    height: 100%;
+}
+
+.slide li:not(:first-child) {
+    display: none;
+}
+
+.slider p {
+    position: absolute;
+    top: 35%;
+    right: 14%;
+    font-family: fantasy;
+    opacity: 0.3;
+    width: auto;
+    font-size: 8vw;
+    height: auto;
+    line-height: 75px;
+    color: #eee;
+    z-index: 10;
+}
+
+.slider button {
+    width: 100px;
+    height: 40px;
+    font-size: 23px;
+    font-family: fantasy;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 47%;
+    left: 46%;
+    opacity: 0.8;
+}
+.slider button:hover {
+    cursor: pointer;
+    background-color: black;
+    color: #eee;
+    transition: all 0.4s ease-out;
+    opacity: 0.8;
+}
+
+main {
+    width: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    height: 950px;
+    margin: 0 auto;
+}
+
+main .box1 {
+    width: 1100px;
+    height: 440px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.box1:nth-child(1) {
+    padding-top: 30px;
+}
+
+main #map {
+    width: 550px;
+    height: 420px;
+    margin: 10px;
+}
+
+#map img {
+    width:420px;
+    height: 100%;
+    z-index: 3;
+    margin-left:40px;
+}
+
+.state {
+    width: 540px;
+    height: 400px;
+    margin: 10px;
+    background-color: #eee;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.state img {
+    width: 270px;
+    height: 180px;
+    margin: 5px;
+    box-shadow: 2px 3px 4px 1px;
+}
+
+.state img:hover {
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+.state .text {
+    box-sizing: border-box;
+    padding: 20px;
+    line-height: 22px;
+}
+
+.text li:hover {
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+}
+
+.state .text p {
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#jb-box {
+    overflow: hidden;
+    width: 100vw;
+    height: 1000px;
+    margin: 110px auto;
+    position: relative;
+}
+
+video {
+    position: absolute;
+    top: -151px;
+    left: 0;
+    width: 100vw;
+    height: 1080px;
+    margin: 0 auto;
+}
+
+#jb-box #text_ask {
+    position: absolute;
+    bottom: 4%;
+    left: 0;
+    font-size: 3.3vw;
+    font-family: impact;
+    color: rgb(122, 121, 121,0.7);
+    background-color: white;
+    width: 100%;
+    height: 149px;
+    padding: 30px 0 0 200px;
+}
+#jb-box button {
+    width: 120px;
+    height: 40px;
+    font-size: 21px;
+    border: none;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    cursor: pointer;
+    position: absolute;
+    bottom: 4%;
+    left: 45%;
+    transition: all 0.8s ease-in-out;
+}
+#jb-box button:hover {
+    background-color: #333;
+    color: #eee;
+    transition: all 0.5s ease-in-out;
+}
+
+#sec {
+    width: 1200px;
+    height: 985px;
+    margin: 0 auto 150px;
+    box-sizing: border-box;
+    padding: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: center;
+    background-color: #eee;
+}
+#sec article {
+    width: 350px;
+    height: 480px;
+    display: flex;
+    flex-flow: column wrap;
+    box-sizing: border-box;
+    padding-top: 35px;
+}
+#sec article img {
+    width: 95%;
+    height: 230px;
+}
+#sec article .text {
+    text-align: center;
+    box-sizing: border-box;
+    padding: 10px;
+    color: #333;
+}
+#sec article p {
+    font-size: 13px;
+    line-height: 20px;
+}
+#sec article button {
+    width: 70px;
+    height: 25px;
+    border: none;
+    color: #eee;
+    background-color: #333;
+    cursor: pointer;
+    font-size: 13px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 10px;
+    margin-top: 10px;
+}
+
+#slider3 {
+    background-image: url("../img/main/koalas_1.jpg");
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 940px;
+    margin: 0 auto;
+    position: relative;
+    display: inline-block;
+    margin: 0 auto;
+}
+#slider3 img {
+    width: 100%;
+    height: 100%;
+}
+#slider3 .text {
+    position: absolute;
+    top: 10%;
+    right: 5%;
+    border: 10px solid #eee;
+    width: 500px;
+    height: 350px;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#slider3 .text b {
+    padding: 10px;
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    font-size: 35px;
+    color: ghostwhite;
+}
+#slider3 .text p {
+    padding: 10px;
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    font-size: 27px;
+    color: ghostwhite;
+}
+#slider3 #btn3 {
+    width: 150px;
+    height: 30px;
+    background-color: #333;
+    color: ghostwhite;
+    cursor: pointer;
+    border: none;
+    font-size: 15px;
+}
+#btn3:hover {
+    opacity: 0.8;
+    transition: all 0.5s ease-in-out;
+}
+
+#sec1 {
+    width: 1200px;
+    height: 550px;
+    margin: 30px auto;
+    box-sizing: border-box;
+    padding: 5px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#sec1 article {
+    background-color: rgba(49, 47, 47, 0.8);
+    width: 380px;
+    height: 320px;
+    position: relative;
+}
+#sec1 article img {
+    width: 100%;
+    height: 100%;
+}
+#sec1 article .text {
+    color: #fff;
+    line-height: 25px;
+    text-align: center;
+    width: 100%;
+    height: 20px;
+    margin: 20px auto;
+    position: absolute;
+    bottom: 20px;
+    left: 26%;
+}
+#sec1 button {
+    cursor: pointer;
+    border: none;
+    width: 110px;
+    background-color: #333;
+    color: #eee;
+    padding: 3px;
+    font-size: 11px;
+}
+#sec1 p {
+    font-size: 20px;
+}
+
+footer {
+    width: 100%;
+    height: 860px;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer p {
+    margin: 0 auto;
+    width: 600px;
+    height: 230px;
+    display: inline-block;
+    background-color: #eee;
+    text-align: center;
+    padding: 40px;
+    box-sizing: border-box;
+    font-size: 17px;
+}
+
+footer b {
+    font-size: 23px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+footer #bg {
+    width: 100%;
+    height: 600px;
+    background-color: #333;
+    background-image: url("../img/common/cliff-557066.jpg");
+    background-position: center;
+    top: 20%;
+    background-size: cover;
+}
+
+footer ul {
+    height: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: #333;
+    color: #eee;
+    font-size: 12px;
+}
+
+footer li {
+    cursor: pointer;
+    margin-right: 30px;
+    line-height: 20px;
+    border-right: 1px solid #eee;
+    box-sizing: border-box;
+    padding: 5px;
+}
