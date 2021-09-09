@@ -5,30 +5,33 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AUSTRALIA</title>
-  <link rel="stylesheet" href="css/main.css">
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.min.js"></script>
-    <script src="js/map_change.js"></script>
-    <script src="js/main_slide.js"></script>
-</head>
+    <!-- ---jquery cdn--- -->
+    <link rel="stylesheet" href="css/main.css">
+    <!-- ---css link--- -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Glory&display=swap" rel="stylesheet">
+    <!-- ---google font--- -->
+    <script src="https://kit.fontawesome.com/6584921572.js" crossorigin="anonymous"></script>
+    <!-- ---fontawesome--- -->
+  </head>
 <body>
     <div class="wrapper">
       <div id="top">
         <header>
           <div class="logo">
-            <p id="a">Australia</p>
-            <a href="sub1.html">
-              <img src="img/common/logo_main.png" alt="logo">
-            </a>
+            <a class="title">Australia</a>
+            <i class="fas fa-kiwi-bird"></i>
           </div>
-          <nav>
-            <ul>
+          <i class="fas fa-bars"></i>
+          <ul class="nav-list">
               <li><a href="#main">PLACES TO GO</a></li>
               <li><a href="#sec">THINGS TO DO</a></li>
               <li><a href="#jb-box">PLAN YOUR TRIP</a></li>
               <li><a href="#sec1">YOUTH TRAVEL</a></li>
               <li><a href="#foot">CONTACT US</a></li>
             </ul>
-          </nav>
         </header>  
         
         <div class="slider">
@@ -40,17 +43,19 @@
             <li><img src="img/main/Ikara_North.jpg"  alt="slide image"></li>
             <li><img src="img/main/australia_great.jpg"  alt="slide image"></li>
             <li><img src="img/main/Nambung_Western.jpg"  alt="slide image"></li>
-          </ul>
           <p>
            HOLIDAY HERE  THIS YEAR
           </p>
           <button type="button" onclick="location.href='sub1.html'">Explore</button>
+        </ul>
+          
+         
         </div>
       </div>
     <main>
       <div class="box1">
         <div id="map">
-          <img src="img/main/m-main.jpg" id="mapimg" alt="map">
+          <img src="img/main/m-main.jpg" id="mapimg" class="mapimg" alt="map">
         </div>
         <div class="state">
           <img src="img/main/bris.jpg" id="img1" alt="brisbane">
@@ -239,10 +244,12 @@
           <li>PRIVACY POLICY</li>
           <li>TERMS AND CONDITIONS</li>
           <li>SITEMAP</li>
-          <li>CONTACT +61)02 1353 3246</li>
+          <li>CONTACT +61-02-1353-3246</li>
           <li>AUSTRALIA 2021</li>
         </ul>
       </footer>
     </div>
+    <script src="js/map_change.js"></script>
+    <script src="js/main_slide.js"></script>
   </body>
 </html>

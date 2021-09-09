@@ -1,0 +1,601 @@
+@charset "UTF-8";
+/* color palette : Aussie Palette 
+#130f40 - 남색(글씨)
+#95afc0 - 회색 계통(배경)
+#ffbe76 - 연한 주황색 (글씨랑 대비되게 할 때)
+*/
+
+$fontColor : #130f40;
+$orangeColor : #ffbe76;
+$bgColor : #f0932b;
+
+@mixin flex($x, $y, $w) {
+  display : flex;
+  justify-content : $x;
+  align-items : $y;
+  flex-wrap : $w;
+}
+
+//  ---basic---
+* {
+    margin: 0;
+    padding: 0;
+    font-family: inherit;
+    box-sizing:border-box;
+    object-fit:cover;
+    font-family: 'Glory', sans-serif;
+
+    li,
+    ol,
+    ul {
+        list-style: none;
+    }
+
+    a {
+        text-decoration: none;
+        color: $fontColor;
+    }
+}
+// ---basic end ---
+
+body {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-content: center;
+}
+
+button {
+    margin: 0 auto;
+}
+
+#wrapper {
+    width: 100vw;
+    height: auto;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-content: center;
+}
+
+#top {
+    position: relative;
+    width: 100vw;
+    height: 50vw;
+    margin-bottom : 5%;
+}
+
+  header {
+      z-index: 10;
+      @include flex(space-between , center, nowrap);
+      background-color: $fontColor;
+      padding: 8px 12px;
+
+      .fa-bars {
+        font-size:28px;
+        color: $orangeColor;
+        position:absolute;
+        right: 35px;
+        top: 11px;
+        display: none;
+      }
+
+    .logo {
+        
+        display: flex;
+        margin: 0 30px;
+
+        .title {
+            width: 100px;
+            font-size: 23px;
+            color: $fontColor;
+            line-height: 46px;
+            color: $orangeColor;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+        a {
+            width: 60px;
+        } 
+        .fa-kiwi-bird {
+          color: $bgColor;
+          font-size: 23px;
+          line-height: 46px;
+        } 
+    }
+     .nav-list {
+            display: flex;
+            justify-content: space-around;
+            width: 900px;
+            z-index: 20;
+            background-color: $fontColor;
+        a{
+          color: $orangeColor;  
+          font-size: 15px;
+          padding: 8px 12px;
+          border-radius: 4px;
+          
+          &:hover {
+            background-color: $orangeColor;
+            color: $fontColor;
+          }
+        }
+      
+    }
+  }
+.slider {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.slide {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    position: relative;
+}
+
+.slide > li {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.slide > li > img {
+    width: 100%;
+    height: 100%;
+}
+
+.slide li:not(:first-child) {
+    display: none;
+}
+
+.slider p {
+    position: absolute;
+    top: 35%;
+    right: 14%;
+    font-family: fantasy;
+    opacity: 0.6;
+    width: auto;
+    font-size: 8vw;
+    height: auto;
+    line-height: 75px;
+    color: $fontColor;
+    z-index: 10;
+}
+
+.slider button {
+    width: 100px;
+    height: 40px;
+    font-size: 23px;
+    font-family: fantasy;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 47%;
+    left: 46%;
+    opacity: 0.8;
+}
+.slider button:hover {
+    cursor: pointer;
+    background-color: $fontColor;
+    color: $orangeColor;
+    transition: all 0.4s ease-out;
+    opacity: 0.8;
+}
+
+main {
+    width: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    height: 950px;
+    margin: 0 auto;
+}
+
+main .box1 {
+    width: 100vw;
+    height: auto;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.box1:nth-child(1) {
+    padding-top: 30px;
+}
+
+main #map {
+    width: 55%;
+    height: 420px;
+    margin: 10px;
+}
+
+.mapimg {
+    width:100%;
+    height: 100%;
+    z-index: 3;
+    margin-left:40px;
+}
+
+.state {
+    width: 540px;
+    height: 400px;
+    margin: 10px;
+    background-color: $bgColor;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.state img {
+    width: 270px;
+    height: 180px;
+    margin: 5px;
+    box-shadow: 2px 3px 4px 1px;
+}
+
+.state img:hover {
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+.state .text {
+    box-sizing: border-box;
+    padding: 20px;
+    line-height: 22px;
+    color: $fontColor;
+}
+
+.text li:hover {
+    background-color: $fontColor;
+    color: $orangeColor;
+    cursor: pointer;
+}
+
+.state .text p {
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 10px;
+    color: $fontColor;
+}
+
+#jb-box {
+    overflow: hidden;
+    width: 100vw;
+    height: 1000px;
+    margin: 110px auto;
+    position: relative;
+}
+
+video {
+    position: absolute;
+    top: -151px;
+    left: 0;
+    width: 100vw;
+    height: 1080px;
+    margin: 0 auto;
+}
+
+#jb-box #text_ask {
+    position: absolute;
+    bottom: 4%;
+    left: 0;
+    font-size: 3.3vw;
+    font-family: impact;
+    color: $bgColor;
+    background-color: $fontColor;
+    width: 100%;
+    height: 152px;
+    padding: 30px 0 0 200px;
+}
+#jb-box button {
+    width: 120px;
+    height: 40px;
+    font-size: 21px;
+    border: none;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    cursor: pointer;
+    position: absolute;
+    bottom: 4.5%;
+    left: 45%;
+    transition: all 0.8s ease-in-out;
+    color: $fontColor;
+}
+#jb-box button:hover {
+    background-color: $fontColor;
+    color: $orangeColor;
+    transition: all 0.5s ease-in-out;
+}
+
+#sec {
+    width: 1200px;
+    height: 985px;
+    margin: 0 auto 150px;
+    box-sizing: border-box;
+    padding: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: center;
+    background-color: $bgColor;
+}
+
+    #sec article {
+    width: 350px;
+    height: 480px;
+    display: flex;
+    flex-flow: column wrap;
+    box-sizing: border-box;
+    padding-top: 35px;
+}
+#sec article img {
+    width: 95%;
+    height: 230px;
+}
+#sec article .text {
+    text-align: center;
+    box-sizing: border-box;
+    padding: 10px;
+    color: $fontColor;
+}
+#sec article p {
+    font-size: 13px;
+    line-height: 20px;
+    color: $fontColor;
+
+}
+#sec article button {
+    width: 70px;
+    height: 25px;
+    border: none;
+    color: $fontColor;
+    cursor: pointer;
+    font-size: 13px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 10px;
+    margin-top: 10px;
+}
+
+#sec article button:hover {
+  background-color: $fontColor;
+  color: $orangeColor;
+  transition: all 0.5s ease-in-out;
+}
+
+#slider3 {
+    background-image: url("../img/main/koalas_1.jpg");
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 940px;
+    margin: 0 auto;
+    position: relative;
+    display: inline-block;
+    margin: 0 auto;
+}
+#slider3 img {
+    width: 100%;
+    height: 100%;
+}
+#slider3 .text {
+    position: absolute;
+    top: 10%;
+    right: 5%;
+    border: 10px solid #eee;
+    width: 500px;
+    height: 350px;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    color: $fontColor;
+}
+#slider3 .text b {
+    padding: 10px;
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    font-size: 35px;
+    color: $orangeColor;
+}
+#slider3 .text p {
+    padding: 10px;
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    font-size: 27px;
+    color: $orangeColor;
+}
+#slider3 #btn3 {
+    width: 150px;
+    height: 30px;
+    background-color: $fontColor;
+    color: $orangeColor;
+    cursor: pointer;
+    border: none;
+    font-size: 15px;
+}
+#btn3:hover {
+    opacity: 0.8;
+    transition: all 0.5s ease-in-out;
+}
+
+#sec1 {
+    width: 1200px;
+    height: 550px;
+    margin: 30px auto;
+    box-sizing: border-box;
+    padding: 5px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#sec1 article {
+    // background-color: rgba(49, 47, 47, 0.8);
+    width: 380px;
+    height: 320px;
+    position: relative;
+}
+#sec1 article img {
+    width: 100%;
+    height: 100%;
+}
+#sec1 article .text {
+    color: $orangeColor;
+    line-height: 25px;
+    text-align: center;
+    width: 100%;
+    height: 20px;
+    margin: 20px auto;
+    position: absolute;
+    bottom: 20px;
+    left: 26%;
+}
+#sec1 button {
+    border: none;
+    width: 110px;
+    background-color: $fontColor;
+    color: $orangeColor;
+    padding: 3px;
+    font-size: 11px;
+}
+#sec1 p {
+    font-size: 20px;
+    color: $fontColor;
+}
+
+footer {
+    width: 100%;
+    height: 860px;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer p {
+    margin: 0 auto;
+    width: 600px;
+    height: 230px;
+    display: inline-block;
+    text-align: center;
+    padding: 40px;
+    box-sizing: border-box;
+    font-size: 17px;
+    color: $fontColor;
+}
+
+footer b {
+    font-size: 23px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+footer #bg {
+    width: 100%;
+    height: 600px;
+    background-color: $fontColor;
+    background-image: url("../img/common/cliff-557066.jpg");
+    background-position: center;
+    top: 20%;
+    background-size: cover;
+}
+
+footer ul {
+    height: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: $fontColor;
+    color: $orangeColor;
+    font-size: 12px;
+}
+
+footer li {
+    cursor: pointer;
+    margin-right: 30px;
+    line-height: 20px;
+    border-right: 1px solid $orangeColor;
+    box-sizing: border-box;
+    padding: 5px;
+}
+
+@media screen and (max-width: 480px) {
+  header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 50px;
+    z-index: 10;
+    @include flex(space-between , center, nowrap);
+    background-color: $fontColor;
+    padding: 0 15%;
+
+    .fas-bars {
+      width: 50px;
+      height: 50px;
+      color: $orangeColor;
+    }
+
+  .logo {
+      width: 200px;
+      height: 100%;
+      display: flex;
+      margin: 0 30px;
+
+      .title {
+          width: 100px;
+          font-size: 23px;
+          color: $fontColor;
+          line-height: 46px;
+          color: $orangeColor;
+          font-family: Georgia, 'Times New Roman', Times, serif;
+      }
+      a {
+          width: 60px;
+      
+          img {
+              width: 100%;
+          }
+      }  
+  }
+  nav {
+      display:none;
+    }
+}
+}
+@media screen and (max-width: 748px){
+}
+
+@media screen and (max-width: 1024px){
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    height: 50px;
+    padding: 0;
+    .fa-bars {
+      display: block;
+    }
+    .nav-list {
+      flex-direction: column;
+      width: 100%;
+      align-items: center;
+      width: 100vw;
+      li {
+        width: 100%;
+        a {
+        width: 100%;
+      }
+
+    }
+  }
+ 
+
+}
+
+@media screen and (min-width: 1045px){  
+}
+}
