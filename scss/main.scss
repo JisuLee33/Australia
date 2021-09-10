@@ -64,7 +64,7 @@ button {
     height: 50vw;
     margin-bottom : 5%;
 }
-
+// ---START header---
   header {
       z-index: 10;
       @include flex(space-between , center, nowrap);
@@ -108,84 +108,98 @@ button {
             width: 900px;
             z-index: 20;
             background-color: $fontColor;
-        a{
-          color: $orangeColor;  
-          font-size: 15px;
-          padding: 8px 12px;
-          border-radius: 4px;
-          
-          &:hover {
-            background-color: $orangeColor;
-            color: $fontColor;
-          }
+        
+        li {
+            
+
+            a{
+            
+            color: $orangeColor;  
+            font-size: 15px;
+            padding: 8px 12px;
+            border-radius: 4px;
+            
+            &:hover {
+                background-color: $orangeColor;
+                color: $fontColor;
+            }
+            }
         }
       
     }
   }
+// ---END header---
+
+// ---START slider---
 .slider {
     width: 100%;
     height: 100%;
     margin: 0 auto;
-}
 
-.slide {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    position: relative;
-}
+    .slide {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        position: relative;
+    
+        li {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
 
-.slide > li {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    left: 0;
-    top: 0;
-}
+            &:not(:first-child) {
+                display: none;
+            }
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        
+        }
+        
+        p {
+            position: absolute;
+            top: 35%;
+            right: 14%;
+            font-family: fantasy;
+            opacity: 0.6;
+            width: auto;
+            font-size: 8vw;
+            height: auto;
+            line-height: 75px;
+            color: $fontColor;
+            z-index: 10;
+        }
 
-.slide > li > img {
-    width: 100%;
-    height: 100%;
+        button {
+            width: 100px;
+            height: 40px;
+            font-size: 23px;
+            font-family: fantasy;
+            border: none;
+            cursor: pointer;
+            position: absolute;
+            top: 60%;
+            left: 46%;
+            opacity: 0.8;
+        
+            &:hover {
+                cursor: pointer;
+                background-color: $fontColor;
+                color: $orangeColor;
+                transition: all 0.4s ease-out;
+                opacity: 0.8;
+            }
+            
+        }
+    }
+    
 }
+// ---END slider---
 
-.slide li:not(:first-child) {
-    display: none;
-}
-
-.slider p {
-    position: absolute;
-    top: 35%;
-    right: 14%;
-    font-family: fantasy;
-    opacity: 0.6;
-    width: auto;
-    font-size: 8vw;
-    height: auto;
-    line-height: 75px;
-    color: $fontColor;
-    z-index: 10;
-}
-
-.slider button {
-    width: 100px;
-    height: 40px;
-    font-size: 23px;
-    font-family: fantasy;
-    border: none;
-    cursor: pointer;
-    position: absolute;
-    top: 47%;
-    left: 46%;
-    opacity: 0.8;
-}
-.slider button:hover {
-    cursor: pointer;
-    background-color: $fontColor;
-    color: $orangeColor;
-    transition: all 0.4s ease-out;
-    opacity: 0.8;
-}
-
+// ---START main---
 main {
     width: 100%;
     display: flex;
@@ -261,7 +275,7 @@ main #map {
     margin-top: 10px;
     color: $fontColor;
 }
-
+// ---END main---
 #jb-box {
     overflow: hidden;
     width: 100vw;
@@ -562,9 +576,7 @@ footer li {
           }
       }  
   }
-  nav {
-      display:none;
-    }
+  
 }
 }
 @media screen and (max-width: 748px){
@@ -574,20 +586,25 @@ footer li {
   header {
     flex-direction: column;
     align-items: flex-start;
-    height: 50px;
+    // height: 50px;
     padding: 0;
     .fa-bars {
       display: block;
+      cursor: pointer;
     }
     .nav-list {
       flex-direction: column;
       width: 100%;
       align-items: center;
       width: 100vw;
+      display: none;
       li {
         width: 100%;
+        text-align: center;
+        height: 30px;
         a {
-        width: 100%;
+            width: 100%;
+            display: block;
       }
 
     }
@@ -596,6 +613,6 @@ footer li {
 
 }
 
-@media screen and (min-width: 1045px){  
+@media screen and (min-width: 1025px){  
 }
 }
