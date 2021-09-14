@@ -1,49 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>QUEENSLAND</title>
-  <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.min.js"></script>
-  <script src="js/lightslide.js"></script> 
-  <script src="js/add_map.js"></script>
-  <link rel="stylesheet" href="css/sub.css">
-</head>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AUSTRALIA</title>
+      <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.min.js"></script>
+      <!-- ---jquery cdn--- -->
+      <link rel="stylesheet" href="css/sub.css">
+      <!-- ---css link--- -->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Glory&display=swap" rel="stylesheet">
+      <!-- ---google font--- -->
+      <script src="https://kit.fontawesome.com/6584921572.js" crossorigin="anonymous"></script>
+      <!-- ---fontawesome--- -->
+    </head>
 <body>
-  <div class="wrapper">
-    <header>
-      <div class="logo">
-        <p id="a">Australia</p>
-        <a href="index.html">
-          <img src="img/common/logo_main.png" alt="logo">
-        </a>
-      </div>
-      <nav>
-        <ul>
-          <li><a href="#main">Places to go</a></li>
-          <li><a href="#sec">Things to do</a></li>
-          <li><a href="#jb-box">Plan your trip</a></li>
-          <li><a href="#sec1">Youth travel</a></li>
-          <li><a href="#foot">Contact us</a></li>
-        </ul>
-      </nav>
-    </header>
+  <header>
+    <div class="logo">
+      <a class="title" href="sub1.html">Australia</a>
+      <i class="fas fa-kiwi-bird"></i>
+    </div>
+    <i class="fas fa-bars"></i>
+    <ul class="nav-list">
+        <li><a href="#main">PLACES TO GO</a></li>
+        <li><a href="#sec">THINGS TO DO</a></li>
+        <li><a href="#jb-box">PLAN YOUR TRIP</a></li>
+        <li><a href="#sec1">YOUTH TRAVEL</a></li>
+        <li><a href="#foot">CONTACT US</a></li>
+      </ul>
+  </header>  
 
-    <div id="big_image">
-      <p id="p1">Queensland is the best state to try various</p>
-      <p id="p2">Experience the mysteries of nature, and indulge in Queensland's charm.</p>
+    <div id="big_image" class="big_image">
+      <p id="p1" class="p1">Queensland is the best state to try various</p>
+      <p id="p2" class="p2">Experience the mysteries of nature, and indulge in Queensland's charm.</p>
     </div>
 
-    <p id="main_text">
+    <p id="main_text" class="main_text">
       Home to more than 1,000 ecosystem types and five World Heritage-listed sites, <br> 
       <b>there’s something altogether magical about the beauty of Queensland</b>. Here, <br> 
       islands of white sand dot aqua waters in the Whitsundays, colourful coral bursts to life with fish <br> 
       and turtles on the Great Barrier Reef, and lush green canopies dance in the sun in the Daintree Rainforest.
     </p>
     
-    <main>
-      <section class="tour_1">
+    <main class="state_list">
+      <section class="tour_right">
           <h2 class="heading-1">BRISBANE</h2>
           <div class="row">
             <button onclick="location.href='index.html'">Booking</button>
@@ -59,7 +61,7 @@
           </div>
       </section>
 
-      <section class="tour_2">
+      <section class="tour_left">
           <h2 class="heading-1">GOLD COAST</h2>
           <div class="row">
             <div class="web_left">
@@ -76,7 +78,7 @@
           </div>
       </section>
 
-      <section class="tour_3">
+      <section class="tour_right">
           <h2 class="heading-1">CAIRNS</h2>
           <div class="row">
             <button onclick="location.href='index.html'">Booking</button>
@@ -89,17 +91,15 @@
             </p>
             <div class="web_right">
               <img src="img/sub/skydiving.jpg" alt="skydiving">
-              <img src="img/sub/cu.jpg" alt="curanda">
             </div>
           </div>
       </section>
 
-      <section class="tour_4">
+      <section class="tour_left">
           <h2 class="heading-1">PORT DOUGLAS</h2>
           <div class="row">
             <div class="web_left">
               <img src="img/sub/ScubaDiving.jpg" alt="scubadiving">
-              <img src="img/sub/Port.jpg" alt="port">
             </div>
             <p class="web_right">
               <b>Port Douglas</b>, a small marine city, houses a small town and large and small resorts inside Pomile Beach. <br> 
@@ -113,9 +113,10 @@
       </section>
     </main>
 
-    <map name="Queensland">
+    <div class="queen" id="queen">
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15303.213547118297!2d145.4599703760534!3d-16.48549034143784!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6982a7dffaf7d915%3A0x55eef0c855531846!2sFour%20Mile%20Beach%2C%20Port%20Douglas!5e0!3m2!1sen!2sus!4v1623229422251!5m2!1sen!2sus" allowfullscreen="" loading="lazy"></iframe>
-    </map>
+    </div>
+
     <div class="slide">
       <ul id="slider" class="slider">
           <li class="container_1  " >
@@ -149,22 +150,26 @@
       <span class="prev">&lt;</span>
       <span class="next">&gt;</span>
     </div>
-    <footer id="foot">
-      <p class="text">
-        <b>Ausralia, We've missed you</b><br><br>
+    
+    <footer id="foot" class="foot">
+      <h3> Ausralia, We've missed you</h3>
+      <p class="text">  
         In every corner of Australia,<br> 
         you'll find unique experiences and attractions sure to deliver the most memorable holiday you've ever had. 
         Keep your wanderlust alive with these Aussie travel ideas.
       </p>
-      <div id="bg"></div>
-      <ul>
+      <div id="bg" class="bg"></div>
+      <ul class="contact">
         <li>PRIVACY POLICY</li>
         <li>TERMS AND CONDITIONS</li>
         <li>SITEMAP</li>
-        <li>CONTACT +61)02 1353 3246</li>
+        <li>CONTACT +61-02-1353-3246</li>
         <li>AUSTRALIA 2021</li>
       </ul>
     </footer>
-  </div>  
+
+    <script src="js/menu_toggle.js"></script>
+    <script src="js/add_map.js"></script>
+    <script src="js/main_slide.js"></script>
 </body>
 </html>
