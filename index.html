@@ -17,7 +17,7 @@
     <!-- ---fontawesome--- -->
   </head>
 <body>
-      <div id="top">
+      <div id="top" class="top">
         <header>
           <div class="logo">
             <a class="title">Australia</a>
@@ -44,16 +44,13 @@
             <li><img src="img/main/Nambung_Western.jpg"  alt="slide image"></li>
             <p>HOLIDAY HERE  THIS YEAR</p>
             <button type="button" onclick="location.href='sub1.html'">Explore</button>
-        </ul>
-          
-         
+          </ul>
         </div>
       </div>
+      <!-- ===END top=== -->
     <main>
-      <div class="state_left">
-        <div id="map" class="map">
+      <div class="state_left" id="state_left">
           <img src="img/main/m-main.jpg" id="mapimg" class="mapimg" alt="map">
-        </div>
       </div>
 
       <div class="state_right">
@@ -132,7 +129,6 @@
           </div>
         </div>
       </div>
-    </div>
     </main>
     <!-- ===END main=== -->
 
@@ -141,7 +137,7 @@
         
         <video src="video/aus.mp4" loop muted autoplay></video>
       
-        <p id="text_ask">
+        <p id="text_ask" class="text_ask">
           Would you like to  
           experience the  
           amazing Australian life? 
@@ -151,7 +147,7 @@
       
       </div> 
       
-      <section id="activities" id="activities">
+      <section id="activities" class="activities">
         <article>
           <img src="img/main/ulu.jpg" alt="ulu">
           <div class="text">
@@ -208,12 +204,12 @@
              an endangered animal.</b>
           <p>Koala, Tasmania Devil etc <br>
           Wait your hands</p>
-          <button id="btn3" onclick="location.href='sub1.html'">More Information</button>
+          <button id="btn3" class="btn3" onclick="location.href='sub1.html'">More Information</button>
         </div>
       </div>
 
-      <section id="sec1">
-        <article>
+      <section id="more" class="more">
+        <div class="todo">
           <img src="img/main/kangaroo.jpg" alt="kang">
           <div class="text">
             <b>Plant Volunteer</b><br>
@@ -222,23 +218,22 @@
               <li></li>
             </ul>
           </div>
-        </article>
-        <article>
+        </div>
+        <div class="todo">
           <img src="img/main/man.jpg" alt="man">
           <div class="text">
             <b>Working Holiday</b><br>
             <button onclick="location.href='sub1.html'">More Information</button>
           </div>
-        </article>
-        <article>
+        </div>
+        <div class="todo">
           <img src="img/main/road.jpg" alt="road">
           <div class="text">
             <b>Issue</b><br>
             <button onclick="location.href='sub1.html'">More Information</button>
           </div>
-          
-        </article>
-      </section>
+        </div>
+      </section>    
       <footer id="foot" class="foot">
         <h3> Ausralia, We've missed you</h3>
         <p class="text">  
@@ -247,7 +242,7 @@
           Keep your wanderlust alive with these Aussie travel ideas.
         </p>
         <div id="bg" class="bg"></div>
-        <ul>
+        <ul class="contact">
           <li>PRIVACY POLICY</li>
           <li>TERMS AND CONDITIONS</li>
           <li>SITEMAP</li>
@@ -255,6 +250,11 @@
           <li>AUSTRALIA 2021</li>
         </ul>
       </footer>
+      <!-- <script>
+          if(window.innerWidth<1024){
+            a
+          }
+      </script> -->
     <script src="js/map_change.js"></script>
     <script src="js/main_slide.js"></script>
     <script src="js/menu_toggle.js"></script>
