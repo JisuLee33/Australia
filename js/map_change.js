@@ -1,6 +1,14 @@
 // main- mapImg _change
 
 $(function(){
+  // let i=0;
+  // const map = document.getElementsByClassName("state_name")
+  // while (i < map.length){
+  //   $(".p"+i).hover(function(){
+
+  //   });
+  // }
+
   $("#img1, .p1").hover(function(){
     $("#mapimg").attr("src","img/main/m-Queen.jpg");
   },function(){
