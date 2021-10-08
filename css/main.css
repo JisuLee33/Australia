@@ -141,8 +141,9 @@
   font-family: fantasy;
   cursor: pointer;
   position: absolute;
-  top: 65%;
-  left: 40%;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   opacity: 0.8;
 }
 
@@ -227,17 +228,26 @@ main .state_right .state li:hover {
   margin: 0 auto;
 }
 
+.video_box .askBox{
+  position: absolute;
+  bottom: 0%;
+  width: 100%;
+  height: 100px;
+  background-color: #130f40;
+}
+
 .video_box .text_ask {
   position: absolute;
-  bottom: 0;
-  left: 0;
-  font-size: 3.5vh;
+  text-align: center;
+  width: 100%;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3.5vmin;
   font-family: impact;
   color: #f0932b;
   background-color: #130f40;
-  width: 100%;
-  height: 160px;
-  padding: 2% 11%;
+
 }
 
 .video_box button {
@@ -248,7 +258,8 @@ main .state_right .state li:hover {
   cursor: pointer;
   position: absolute;
   bottom: 1%;
-  left: 45%;
+  left: 50%;
+  transform: translateX(-50%);
   transition: all 0.8s ease-in-out;
   color: #130f40;
 }
@@ -392,31 +403,29 @@ x .video_box button:hover {
   height: 100%;
 }
 
-.more .todo .text {
+.more .todo .moreText, .moreText p {
   color: #ffbe76;
+  font-weight: bold;
   line-height: 25px;
   text-align: center;
-  max-width: 100%;
   height: 20px;
   margin: 20px auto;
   position: absolute;
   bottom: 20px;
-  left: 26%;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
-.more .todo .text button {
+.more .todo .moreText button {
   border: none;
   width: 110px;
   background-color: #130f40;
   color: #ffbe76;
   padding: 3px;
   font-size: 11px;
+  cursor: pointer;
 }
 
-.more .todo .text p {
-  font-size: 20px;
-  color: #130f40;
-}
 
 .foot {
   width: 100%;

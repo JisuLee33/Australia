@@ -1,5 +1,7 @@
 //slider
 $(function(){
+
+ 
 var i=0;
 function slide(){
 i++;

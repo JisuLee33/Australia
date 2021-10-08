@@ -1,6 +1,13 @@
 //sub- .slide image click => map change
 
 $(function(){
+  $(window).on("click",function(e){
+    console.log(e.target);
+  })
+  $('.boxslider').bxSlider({
+    maxSlides: 3,
+  });
+
   $(".container_1").click(function(){
     $("#queen iframe").attr("src", "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15303.213547118297!2d145.4599703760534!3d-16.48549034143784!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6982a7dffaf7d915%3A0x55eef0c855531846!2sFour%20Mile%20Beach%2C%20Port%20Douglas!5e0!3m2!1sen!2sus!4v1623229422251!5m2!1sen!2sus");
     $(".slider p").removeClass("skyblue");
@@ -38,4 +45,6 @@ $(function(){
     $(".slider p").removeClass("skyblue");
     $(this).find('p').addClass("skyblue");
   });
+
+  
 });
