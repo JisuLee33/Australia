@@ -38,6 +38,7 @@ flex-wrap : $w;
     button {
         margin: 0 auto;
         border: none;
+        border-radius: 3px;
     }
 }
 // ---basic end ---
@@ -48,7 +49,7 @@ flex-wrap : $w;
     max-width: 100vw;
     height: 100vh;
     header {
-        z-index: 10;
+        z-index: 100;
         @include flex(space-between , center, nowrap);
         width: 100%;
         background-color: $fontColor;
@@ -151,8 +152,9 @@ flex-wrap : $w;
                 font-family: fantasy;
                 cursor: pointer;
                 position: absolute;
-                top: 65%;
-                left: 40%;
+                top: 70%;
+                left: 50%;
+                transform: translate(-50%, -50%);
                 opacity: 0.8;
             
                 &:hover {
@@ -180,6 +182,7 @@ main {
         margin: auto;
             .mapimg {
                 width:100%;
+                padding-top: 50px;
             }
         }
     
@@ -221,6 +224,8 @@ main {
 }
 
 // ---END main---
+
+// ---START video_box---
 .video_box {
     overflow: hidden;
     width: 100%;
@@ -237,46 +242,56 @@ main {
         margin: 0 auto;
     }
 
-    .text_ask {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    font-size: 3.5vh;
-    font-family: impact;
-    color: $bgColor;
-    background-color: $fontColor;
-    width: 100%;
-    height: 160px;
-    padding: 2% 11%;
-    }
-
-    button {
-    width: 120px;
-    height: 30px;
-    font-size: 21px;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    cursor: pointer;
-    position: absolute;
-    bottom: 1%;
-    left: 45%;
-    transition: all 0.8s ease-in-out;
-    color: $fontColor;
-
-    x   &:hover {
+    .askBox {   
+        position: absolute;
+        bottom: 0%;
+        width: 100%;
+        height: 100px;
+        margin: 10px 0;
         background-color: $fontColor;
-        color: $orangeColor;
-        transition: all 0.5s ease-in-out;
+        
+        .text_ask {
+            position: absolute;
+            top: 35%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            font-size: 3.5vmin;
+            font-family: impact;
+            color: $bgColor;
+            background-color: $fontColor;
+            width: 100%;
         }
-    }
+
+        button {
+            width: 120px;
+            height: 30px;
+            font-size: 21px;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            position: absolute;
+            bottom: 1%;
+            left: 50%;
+            transform: translateX(-50%);
+            color: $fontColor;
+
+            &:hover {
+            cursor: pointer;
+            background-color: $orangeColor;
+            color: $fontColor;
+            transition: all 0.4s ease-out;
+            opacity: 0.8;
+        }
+        }
+    } 
 }
-//END video_box
+// ---END video_box---
 
-
+// ---START activities---
 .activities {
     max-width: 1200px;
     height: auto;
     margin: 5% auto;
-    padding: 5px;
+    padding: 50px 5px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -323,7 +338,7 @@ main {
         }
     }
 }
-//END activities
+// ---END activities---
 
 .message {
     background-image: url("../img/main/koalas_1.jpg");
@@ -350,7 +365,7 @@ main {
         color: $fontColor;
     
              
-            b {
+            h2 {
             padding: 10px;
             display: inline-block;
             text-align: center;
@@ -369,15 +384,17 @@ main {
             .btn3 {
             width: 150px;
             height: 30px;
-            background-color: $fontColor;
-            color: $orangeColor;
+            color: $fontColor;
             cursor: pointer;
             border: none;
             font-size: 15px;
         
                 &:hover {
+                    cursor: pointer;
+                    background-color: $fontColor;
+                    color: $orangeColor;
+                    transition: all 0.4s ease-out;
                     opacity: 0.8;
-                    transition: all 0.5s ease-in-out;
                 }
         }
     }
@@ -389,7 +406,7 @@ main {
         max-width: 1200px;
         height: auto;
         margin: 5% auto;
-        padding: 5px;
+        padding: 100px 5px;
         display: flex;
         justify-content: space-evenly;
         align-items: center;
@@ -403,28 +420,35 @@ main {
                 width: 100%;
                 height: 100%;
             }
-            .text {
+            .moreText {
                 color: $orangeColor;
                 line-height: 25px;
                 text-align: center;
-                max-width: 100%;
                 height: 20px;
                 margin: 20px auto;
                 position: absolute;
                 bottom: 20px;
-                left: 26%;
+                left: 50%;
+                transform: translateX(-50%);
             
                 button {
                     border: none;
                     width: 110px;
-                    background-color: $fontColor;
-                    color: $orangeColor;
+                    color: $fontColor;
                     padding: 3px;
                     font-size: 11px;
+
+                    &:hover {
+                        cursor: pointer;
+                        background-color: $fontColor;
+                        color: $orangeColor;
+                        transition: all 0.4s ease-out;
+                        opacity: 0.8;
+                    }
                 }
-                p {
+                h4 {
                     font-size: 20px;
-                    color: $fontColor;
+                    color: $orangeColor;
                 }
             }
         }
